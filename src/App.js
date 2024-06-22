@@ -1,5 +1,5 @@
 import "./styles.css";
-import { Input } from "./main.jsx";
+import { Input } from "./components/Input.jsx";
 
 export default function App() {
   return <Input />;
