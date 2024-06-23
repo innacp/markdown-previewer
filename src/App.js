@@ -1,4 +1,4 @@
-import "./styles.css";
+import "../src/styles.css";
 import { Input } from "./components/Input.jsx";
 
 export default function App() {
