@@ -4,7 +4,27 @@
     box-sizing: border-box;
 }
 
-.heading {
+h1 {
     color: blueviolet;
-    background-color: bisque;
+    
 }
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+    border: 1px solid black;
+}
+main {
+    display: flex;
+    gap: 60px;
+}
+/* textarea {
+    
+    height: 400px;
+} */
+.preview {
+    border: 1px solid gray;
+}
+
