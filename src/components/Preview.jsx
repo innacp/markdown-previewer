@@ -1,5 +1,7 @@
-export function Preview() {
+// import marked from "marked";
+
+export function Preview({markdown}) {       //passing prop 'mardown'
     return (
-        <textarea></textarea>    
+        <div className="preview"></div>    
     )
 }
