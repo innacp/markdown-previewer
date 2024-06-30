@@ -1,31 +1,19 @@
-import { useState } from "react";
-import { TextInput } from "./components/TextInput.jsx";
-import { Preview } from "./components/Preview.jsx";
+import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
 import "../src/styles.css";
 
 export default function App() {
-  const [markdown, setMarkdown] = useState("");
-
-  const handleInputChange = (e) => {
-    //
-    setMarkdown(e.target.value);
-  };
+  const [markdown, setMarkdown] = useState("markdown");
 
   return (
     <div className="app">
-      <header className="app-header">
-        <h1>Markdown Previewer</h1>
-      </header>
-      <main>
-        <section className="input-section">
-          <TextInput
-            markdown={markdown}
-            handleInputChange={handleInputChange}
-          />
-        </section>
-        <section className="preview-section">
-          <Preview />
-        </section>
+      <h1>Markdown Previewer</h1>
+      <main className="previewer-container">
+        <textarea
+          value={markdown}
+          onChange={(e) => setMarkdown(e.target.value)}
+        />
+        <ReactMarkdown children={markdown} className="preview" />
       </main>
     </div>
   );
